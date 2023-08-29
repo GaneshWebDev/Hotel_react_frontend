@@ -45,7 +45,7 @@ export function Bookings(){
     const [loading,setLoading]=useState(true);
     const [bookings,setBookings]=useState(null);
     useEffect(() => {
-        axios.get('/getAllBookingDetails')
+        axios.get('https://hotelbookingservice.onrender.com/getAllBookingDetails')
           .then(response => {
             console.log(response.data)
             setBookings(response.data);
@@ -92,7 +92,7 @@ export function Users(){
     const [loading,setLoading]=useState(true);
     const [users,setUsers]=useState(null);
     useEffect(() => {
-        axios.get('/getAllUsersDetails')
+        axios.get('https://hotelbookingservice.onrender.com/getAllUsersDetails')
           .then(response => {
             console.log(response.data)
             setUsers(response.data);
@@ -271,7 +271,7 @@ export function GetRooms(){
 
   useEffect(() => {
     // Fetch room data from your backend API
-    axios.get('/admin/rooms')
+    axios.get('https://hotelbookingservice.onrender.com/admin/rooms')
       .then(response => {
         setRooms(response.data);
       })
