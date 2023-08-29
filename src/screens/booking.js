@@ -45,7 +45,7 @@ function Booking(){
      });
     }
     useEffect(() => {
-        axios.get(`/api/roomsGetRoomById/${roomid}`)
+        axios.get(`https://hotelbookingservice.onrender.com/api/roomsGetRoomById/${roomid}`)
           .then(response => {
             setRoom(response.data);
             console.log(response.data);
