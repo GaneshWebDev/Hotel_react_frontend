@@ -87,7 +87,7 @@ function HomePage() {
      
   }
   useEffect(() => {
-    axios.get('https://hotelbookingservice.onrender.com/api/rooms')
+    axios.get('/api/rooms')
       .then(response => {
         setRooms(response.data.rooms);
         setDuplicateRooms(response.data.rooms);
